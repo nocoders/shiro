@@ -32,6 +32,18 @@ public class PermissionTest extends BaseTest{
 		subject().checkPermissions("user:delete","user:update");
 //		断言拥有权限 user:view 失败抛出异常
 		subject().checkPermissions("user:view");
-		
 	}
+//	字符串通配符权限，资源标识符：操作：对象实列ID
+	@Test
+	public void testPermission() {
+		login("classpath:charpt3/shiro-permission.ini", "li", "123");
+		subject().checkPermissions("system:user:update");
+		
+		subject().checkPermissions("system:user:update","system:user:delete");
+		subject().checkPermissions("system:user:update,delete");
+		subject().checkPermissions("system:user:create,update,delete,view");
+		subject().checkPermissions("system:user:*");
+		subject().checkPermissions("user:view");
+	}
+	
 }
