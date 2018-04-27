@@ -16,7 +16,7 @@ import junit.framework.Assert;
 public class LoginLogoutTest {
 	@Test
 	public void testHelloWorld() {
-		Factory<SecurityManager>factory=new IniSecurityManagerFactory("classpath:shiro.ini");
+		Factory<SecurityManager>factory=new IniSecurityManagerFactory("classpath:charpt2/shiro.ini");
 		SecurityManager securityManager = factory.getInstance();
 		SecurityUtils.setSecurityManager(securityManager);
 		Subject subject = SecurityUtils.getSubject();
@@ -34,7 +34,7 @@ public class LoginLogoutTest {
 	}
 	@Test
 	public void testCustomRealm() {
-		Factory<SecurityManager>factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
+		Factory<SecurityManager>factory = new IniSecurityManagerFactory("classpath:charpt2/shiro-realm.ini");
 		SecurityManager securityManager = factory.getInstance();
 		SecurityUtils.setSecurityManager(securityManager);
 		Subject subject = SecurityUtils.getSubject();
@@ -57,7 +57,7 @@ public class LoginLogoutTest {
 	 */
 	@Test
 	public void testCustomMultiRealm() {
-		Factory<SecurityManager>factory=new IniSecurityManagerFactory("classpath:shiro-multi-realm.ini");
+		Factory<SecurityManager>factory=new IniSecurityManagerFactory("classpath:charpt2/shiro-multi-realm.ini");
 		SecurityManager securityManager = factory.getInstance();
 		SecurityUtils.setSecurityManager(securityManager);
 		Subject subject = SecurityUtils.getSubject();
@@ -73,7 +73,7 @@ public class LoginLogoutTest {
 	}
 	@Test
 	public void testJDBCRealm() {
-		Factory<SecurityManager>factory=new IniSecurityManagerFactory("classpath:shiro-jdbc-realm.ini");
+		Factory<SecurityManager>factory=new IniSecurityManagerFactory("classpath:charpt2/shiro-jdbc-realm.ini");
 		SecurityManager securityManager = factory.getInstance();
 		SecurityUtils.setSecurityManager(securityManager);
 		Subject subject = SecurityUtils.getSubject();
