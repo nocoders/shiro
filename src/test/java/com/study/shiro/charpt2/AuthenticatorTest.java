@@ -30,11 +30,13 @@ public class AuthenticatorTest {
 //	通用化登录逻辑
 	public void login(String configFile) {
 		Factory<SecurityManager>factory=new IniSecurityManagerFactory(configFile);
+		System.out.println("sysout");
 		SecurityManager securityManager = factory.getInstance();
 		SecurityUtils.setSecurityManager(securityManager);
 		Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken("zhang", "123");
 		subject.login(token);
+		System.out.println("susoisfh");
 	}
 	
 	public void tearDown() throws Exception{
