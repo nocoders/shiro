@@ -19,6 +19,24 @@
 	</properties>
 
 	<dependencies>
+		<!-- Java调用阿里云短信接口 -->
+		<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core -->
+		<dependency>
+		    <groupId>com.aliyun</groupId>
+		    <artifactId>aliyun-java-sdk-core</artifactId>
+		    <version>3.7.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-dysmsapi -->
+		<dependency>
+		    <groupId>com.aliyun</groupId>
+		    <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+		    <version>1.1.0</version>
+		</dependency>
+		<dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.3.1</version>
+        </dependency>
 	<!-- 文件发送接收 -->
 		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
 		<dependency>

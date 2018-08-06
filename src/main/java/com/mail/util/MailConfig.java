@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * Created by cuizhixiang on 2017/5/31.
+ * Created by linmeng
  * 过去资源文件数据
  **/
 @Component
