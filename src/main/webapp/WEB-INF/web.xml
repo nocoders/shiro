@@ -7,9 +7,10 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    <!-- mybatis 和redis配置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-mybatis.xml</param-value>
+		<param-value>classpath:spring-redis.xml,classpath:spring-mybatis.xml</param-value>
 	</context-param>
 
 	<servlet>
